@@ -24,8 +24,41 @@
 ## Quick Start
 
 1. infoNCE Loss
+```shell
+# GD
+# contrast
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name NCE --loss_function mse  --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset GD
 
+# HSS
+# contrast
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name NCE --loss_function mse --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset HSS
+
+
+# TD
+## contrast
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name NCE --loss_function mse --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset TD
+
+```
 2. AdversirialLoss
+
+```shell
+# GD
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name Discriminator --loss_function mse  --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset GD --discriminator
+
+# HSS
+# discriminator
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name Discriminator --loss_function mse  --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset HSS --discriminator
+
+
+# ECG
+# ECG contrast
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name NCE --loss_function mse --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset ECG
+# ECG discriminator
+
+# TD
+# discriminator
+python main.py --train --seed 3 --model_name VQRAEcontrast --log_name Discriminator --loss_function mse  --lmbda 0.0001 --use_clip_norm --batch_size 64 --preprocessing --dataset TD --discriminator
+```
 
 ## Citations
 ```
