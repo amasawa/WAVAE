@@ -1,6 +1,6 @@
 # Weakly Augmented Variational Autoencoder in Time Series Anomaly Detection
 
-![image](./fram.pdf)
+![image](fram.pdf)
 
 > ### Weakly Augmented Variational Autoencoder in Time Series Anomaly Detection
 >
